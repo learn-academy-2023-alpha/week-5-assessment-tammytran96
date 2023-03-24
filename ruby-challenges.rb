@@ -33,13 +33,11 @@ us_states = { northwest: ['Washington', 'Oregon', 'Idaho'], southwest: ['Califor
 # Expected output: ['Arizona', 'California', 'Idaho', 'Maine', 'Nevada', 'New Hampshire', 'Oregon', 'Rhode Island', 'Washington'] 
 
 def alphabeticalArray (hash)
-    (hash[:northwest] + hash[:southwest] + hash[:notheast]).sort # I tried to use the .flatten method to remove the nested arrays but that didn't work for me. This method worked though.
+    hash.values.flatten.sort
 end
 
 p alphabeticalArray(us_states)
 # ["Arizona", "California", "Idaho", "Maine", "Nevada", "New Hampshire", "Oregon", "Rhode Island", "Washington"]
-
-
 
 
 # --------------------3a) Create a class called Bike that is initialized with a model, wheels, and current_speed. The default number of wheels is 2. The current_speed should start at 0. Create a bike_info method that returns a sentence with all the data from the bike object.
